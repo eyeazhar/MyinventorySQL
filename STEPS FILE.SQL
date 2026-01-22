@@ -88,10 +88,6 @@ UPDATE inventory_cleaned
 SET quantity = 0
 WHERE quantity < 0;
 
--- Remove invalid records (optional)
-DELETE FROM inventory_cleaned
-WHERE data_status = 'INVALID';
-
 STEP 7: -- FINAL OUTPUT --
 
 SELECT * FROM inventory_cleaned
